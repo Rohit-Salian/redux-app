@@ -42,7 +42,24 @@ module.exports = {
       },
       {
         test: /(\.css)$/,
-        use: ["style-loader", "css-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [() => [require("cssnano")]],
+              },
+              sourceMap: true,
+            },
+          },
+        ],
       },
     ],
   },
