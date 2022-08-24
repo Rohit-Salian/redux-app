@@ -16,14 +16,7 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
-  devServer: {
-    stats: "minimal",
-    overlay: true,
-    historyApiFallback: true,
-    disableHostCheck: true,
-    headers: { "Access-Control-Allow-Origin": "*" },
-    https: false,
-  },
+
   plugins: [
     new webpackBundleAnalyzer.BundleAnalyzerPlugin({ analyzerMode: "static" }),
 
