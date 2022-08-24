@@ -4,11 +4,15 @@
     "start:dev": "webpack serve --config webpack.config.dev.js --port 3000",
     "prestart:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
+<<<<<<< HEAD
     "clean:build": "rimraf ./build && mkdir build",
     "prebuild":"run-p clean:build",
     "build": "webpack --config webpack.config.prod.js",
     "postbuild": "run-p start:api serve:build",
     "serve:build": "http-server ./build"
+=======
+    "build": "webpack --config webpack.config.dev.js"
+>>>>>>> 13becb8fe8999128f48926ba1cf3f5d4c537d302
   },
   "dependencies": {
     "bootstrap": "5.0.2",
