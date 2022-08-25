@@ -19,7 +19,7 @@ const router = jsonServer.router(path.join(__dirname, "db.json"));
 // Can pass a limited number of options to this to override (some) defaults. See https://github.com/typicode/json-server#api
 const middlewares = jsonServer.defaults({
   // Display json-server's built in homepage when json-server starts.
-  static: "node_modules/json-server/dist",
+  static: "node_modules/json-server/public",
 });
 
 // Set default middlewares (logger, static, cors and no-cache)
@@ -58,7 +58,7 @@ server.post("/courses/", function (req, res, next) {
 server.use(router);
 
 // Start server
-const port = 3001;
+const port = 3002;
 server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
 });
