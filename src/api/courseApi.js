@@ -2,14 +2,13 @@ import { handleError, handleResponse } from "./apiUtils";
 const baseUrl = process.env.API_URL + "/courses/";
 
 export function getCourses() {
-  return (
-    fetch(baseUrl).then(handleResponse).catch(handleError),
-    {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    }
-  );
+  return fetch(baseUrl, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  })
+    .then(handleResponse)
+    .catch(handleError);
 }
 
 export function saveCourse(course) {
