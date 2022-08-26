@@ -6,7 +6,6 @@ export function getCourses() {
     fetch(baseUrl).then(handleResponse).catch(handleError),
     {
       headers: {
-        "content-type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
     }
@@ -18,7 +17,6 @@ export function saveCourse(course) {
     method: course.id ? "PUT" : "POST",
     headers: {
       "content-type": "application/json",
-      "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify(course),
   })
