@@ -17,7 +17,9 @@ module.exports = {
 
     filename: "bundle.js",
   },
-  headers: { "Access-Control-Allow-Origin": "*" },
+  devServer: {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  },
 
   plugins: [
     new webpackBundleAnalyzer.BundleAnalyzerPlugin({ analyzerMode: "static" }),
