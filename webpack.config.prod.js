@@ -28,7 +28,7 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
       "process.env.API_URL": JSON.stringify(
-        "https://react-router-cd.netlify.app"
+        "https://react-router-cd.netlify.app:3001"
       ),
     }),
     new HtmlWebpackPlugin({
